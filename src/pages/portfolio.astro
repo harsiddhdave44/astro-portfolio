@@ -5,48 +5,68 @@ import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 
-import { contentfulClient } from '../lib/contentful'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
-import type { EntryFieldTypes } from 'contentful'
-
-interface Project {
-  contentTypeId: 'Projects'
-  fields: {
-    name: EntryFieldTypes.Text
-    img: EntryFieldTypes.AssetLink
-    website: EntryFieldTypes.EntryResourceLink<any>
-    repositorio: EntryFieldTypes.EntryResourceLink<any>
-  }
-}
-
-const entries = await contentfulClient.getEntries<Project>({})
+const projects = [
+  {
+    name: 'Byakugan – API Monitoring Tool',
+    description:
+      'API monitoring and observability tool built to track uptime and behavior.',
+    tech: 'Golang (backend), React (frontend)',
+    image: '/View1.png',
+    link: null,
+    repo: null,
+  },
+  {
+    name: 'Centralized Logging & Monitoring (SaaS – WIP)',
+    description:
+      'Custom-built logging and monitoring platform without relying on existing open-source collectors.',
+    tech: 'Design-stage, evolving architecture',
+    image: '/View2.png',
+    link: null,
+    repo: null,
+  },
+  {
+    name: 'DevOps Automation & Platform Projects',
+    description:
+      'Reusable Terraform modules, CI/CD pipelines, Kubernetes deployments, and cloud automation across client projects.',
+    tech: 'AWS, Terraform, Kubernetes, Jenkins, Docker',
+    image: '/me.png',
+    link: null,
+    repo: null,
+  },
+]
 ---
 
 <BaseLayout
   title="Portfolio"
-  description="Projects and some clone's that I did"
+  description="Selected platform, DevOps, and backend projects."
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
       <h2
         class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
       >
-        Projects and clone's
+        Projects & Platforms
       </h2>
     </TopLayout>
     <BottomLayout size="xl">
       <div class="flex w-full flex-wrap justify-center gap-2">
         {
-          entries.items.map((entry: any) => (
+          projects.map((project) => (
             <ProjectCard
-              key={entry?.sys?.id}
-              href={entry?.fields?.website}
-              heading={entry?.fields?.name}
-              subheading={entry?.fields?.description}
-              imagePath={entry?.fields?.img?.fields?.file.url}
-              altText={entry?.fields?.img?.fields.title}
+              as={project.link ? 'a' : 'div'}
+              href={project.link ?? undefined}
+              heading={project.name}
+              subheading={`${project.description} • ${project.tech}`}
+              imagePath={project.image}
+              altText={`${project.name} preview`}
               class="w-full sm:w-2/5"
-            />
+            >
+              {!project.link && !project.repo && (
+                <p class="px-5 pb-4 text-xs text-muted-foreground">
+                  Links coming soon (placeholder).
+                </p>
+              )}
+            </ProjectCard>
           ))
         }
       </div>
