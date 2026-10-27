@@ -7,38 +7,35 @@ import ProjectCard from '../components/ProjectCard.astro'
 
 const projects = [
   {
-    name: 'Byakugan – API Monitoring Tool',
+    name: 'Byakugan — API Monitoring Tool',
     description:
-      'API monitoring and observability tool built to track uptime and behavior.',
-    tech: 'Golang (backend), React (frontend)',
+      'An API monitoring and observability tool focused on endpoint uptime and behavior.',
+    tech: 'Go, React',
     image: '/View1.png',
     link: null,
-    repo: null,
   },
   {
-    name: 'Centralized Logging & Monitoring (SaaS – WIP)',
+    name: 'Centralized Logging & Monitoring Platform',
     description:
-      'Custom-built logging and monitoring platform without relying on existing open-source collectors.',
-    tech: 'Design-stage, evolving architecture',
+      'A work-in-progress platform concept exploring custom log collection, ingestion, and monitoring.',
+    tech: 'Platform architecture, observability',
     image: '/View2.png',
     link: null,
-    repo: null,
   },
   {
-    name: 'DevOps Automation & Platform Projects',
+    name: 'Cloud Platform Engineering',
     description:
-      'Reusable Terraform modules, CI/CD pipelines, Kubernetes deployments, and cloud automation across client projects.',
-    tech: 'AWS, Terraform, Kubernetes, Jenkins, Docker',
+      'Production work across AWS infrastructure, Terraform, Kubernetes, and CI/CD, including cloud cost and database migration performance improvements.',
+    tech: 'AWS, Terraform, Kubernetes, Jenkins, GitHub Actions',
     image: '/me.png',
     link: null,
-    repo: null,
   },
 ]
 ---
 
 <BaseLayout
   title="Portfolio"
-  description="Selected platform, DevOps, and backend projects."
+  description="Selected platform engineering, cloud, and observability work."
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
@@ -60,13 +57,7 @@ const projects = [
               imagePath={project.image}
               altText={`${project.name} preview`}
               class="w-full sm:w-2/5"
-            >
-              {!project.link && !project.repo && (
-                <p class="px-5 pb-4 text-xs text-muted-foreground">
-                  Links coming soon (placeholder).
-                </p>
-              )}
-            </ProjectCard>
+            />
           ))
         }
       </div>
