@@ -7,13 +7,8 @@ export const loaderAnimation = [
 ]
 
 export const LINKS = {
-  github: 'https://github.com/placeholder-harsiddh',
-  linkedin: 'https://www.linkedin.com/in/placeholder-harsiddh',
-  mail: 'mailto:harsiddh.dave@example.com',
-  instagram: 'https://www.instagram.com/placeholder-harsiddh',
-  medium: 'https://medium.com/@placeholder-harsiddh',
-  discord: 'https://discordapp.com/users/placeholder',
-  x: 'https://x.com/placeholder-harsiddh',
+  github: 'https://github.com/harsiddhdave44',
+  mail: 'mailto:harsiddhdave44@outlook.com',
 }
 
 // Global
@@ -27,7 +22,7 @@ export const SITE: Site = {
 // Work Page
 export const WORK: Page = {
   TITLE: 'Work',
-  DESCRIPTION: 'Recent roles and hands-on platform engineering work.',
+  DESCRIPTION: 'Experience building and operating cloud platforms and delivery systems.',
 }
 
 // Blog Page
@@ -51,22 +46,10 @@ export const SEARCH: Page = {
 // Study Page
 export const STUDIES = [
   {
-    title: 'Degree (Placeholder)',
-    institution: 'University Name (Placeholder)',
-    link: 'https://example.com',
-    date: 'Year - Year',
-  },
-  {
-    title: 'Certification (Placeholder)',
-    institution: 'Platform / Provider',
-    link: 'https://example.com',
-    date: 'Year',
-  },
-  {
-    title: 'Course (Placeholder)',
-    institution: 'Training Provider',
-    link: 'https://example.com',
-    date: 'Year',
+    title: 'Bachelor of Engineering in Computer Science',
+    institution: 'Gujarat Technological University',
+    link: 'https://www.gtu.ac.in/',
+    date: '2017 - 2020',
   },
 ]
 
@@ -79,36 +62,36 @@ export const EXPERIENCE = [
     link: 'https://www.sunflowerlab.com/',
     end: 'Present',
     tasks: [
-      'Designed and operated AWS infrastructure using Terraform and Kubernetes (EKS).',
-      'Built and maintained CI/CD pipelines with Jenkins, GitHub Actions, and GitLab CI.',
-      'Led troubleshooting of production issues including performance, memory leaks, and scaling.',
-      'Partnered with application teams on cloud-native architecture and deployments.',
+      'Design and operate AWS infrastructure with Terraform, EKS, ECS, and supporting cloud services.',
+      'Build and maintain delivery pipelines with Jenkins, GitHub Actions, and GitLab CI.',
+      'Lead production troubleshooting across application, database, networking, and container layers.',
+      'Partner with engineering teams on reliability, security, cloud architecture, and release automation.',
     ],
   },
   {
     company: 'InterviewReady',
     location: 'India',
     position: 'DevOps Engineer',
-    link: 'https://example.com',
-    start: 'Month YYYY',
-    end: 'Month YYYY',
+    link: 'https://www.interviewready.io/',
+    start: 'Oct 2022',
+    end: 'Jul 2023',
     tasks: [
-      'Placeholder: built CI/CD workflows and deployment automation.',
-      'Placeholder: managed cloud infrastructure and release pipelines.',
-      'Placeholder: improved reliability and observability for production systems.',
+      'Reduced AWS infrastructure spend from about $900 to about $300 per month.',
+      'Cut PostgreSQL migration execution time from about 60 seconds to about 7 seconds.',
+      'Improved delivery pipelines and deployment workflows, reducing deployment time by about 50%.',
     ],
   },
   {
     company: 'RKIT Software Private Limited',
-    link: 'https://example.com',
+    link: 'https://www.rkitsoftware.com/',
     location: 'India',
-    position: 'DevOps Engineer',
-    start: 'Month YYYY',
-    end: 'Month YYYY',
+    position: 'Cloud Engineer / .NET Developer',
+    start: 'Jul 2019',
+    end: 'Sep 2022',
     tasks: [
-      'Placeholder: automated infrastructure provisioning and environment setup.',
-      'Placeholder: supported Kubernetes workloads and delivery pipelines.',
-      'Placeholder: collaborated with engineering teams to ship reliable releases.',
+      'Configured and maintained cloud infrastructure and application environments.',
+      'Developed and supported .NET applications alongside cloud and deployment work.',
+      'Worked across application delivery, troubleshooting, and infrastructure operations.',
     ],
   },
 ]
